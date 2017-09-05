@@ -16,7 +16,7 @@
             android:id="@+id/collaps"
             android:layout_width="match_parent"
             android:layout_height="@dimen/tab_height"
-            app:contentScrim="#FA7199"
+            app:contentScrim="@color/colorAccent"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:statusBarScrim="@android:color/transparent">
 
@@ -29,19 +29,21 @@
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar1"
+
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                app:collapseIcon="@mipmap/ic_book_list"
+                android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
+                android:padding="10dip"
                 app:navigationIcon="@mipmap/navigation_back_white"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:title="@string/app_name"
                 app:titleTextColor="@color/white">
                 <!--自定义带图片的立即播放按钮-->
                 <LinearLayout
+                    android:layout_marginTop="10dp"
                     android:id="@+id/playButton"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:visibility="gone">
@@ -49,15 +51,19 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+
                         android:src="@mipmap/ic_book_list" />
 
                     <TextView
+                        android:layout_marginStart="0dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:layout_marginLeft="5dp"
                         android:text="立即播放"
                         android:textColor="#ffffff" />
                 </LinearLayout>
+
 
 
             </android.support.v7.widget.Toolbar>
@@ -86,8 +92,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
-        app:fabSize="mini"
-        android:src="@mipmap/add" />
+        android:src="@mipmap/add"
+        app:fabSize="mini" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab2"
@@ -97,7 +103,6 @@
         android:layout_marginRight="15dp"
         android:src="@mipmap/ic_book_list"
         app:elevation="6dp"
-
         app:layout_anchor="@+id/appbar"
         app:layout_anchorGravity="bottom|right" />
 </android.support.design.widget.CoordinatorLayout>
